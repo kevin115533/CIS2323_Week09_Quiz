@@ -25,4 +25,16 @@ public class Yahtzee{
 		}
 		
 	}
+	
+	public String tossCheat() throws CheatException{
+		int dice1 = d1.roll();
+		int dice2 = d2.roll();
+		
+		if(dice1 ==6 && dice2 ==6){
+			return "Yahtzee";
+		}
+		else {
+			throw (new CheatException());
+		}
+	}
 }
